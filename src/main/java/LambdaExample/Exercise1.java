@@ -3,6 +3,7 @@ package LambdaExample;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class Exercise1 {
@@ -30,6 +31,15 @@ public class Exercise1 {
                 System.out.println(p);
             }
         }
+        //JAVA8 forEach.
+        System.out.println("""
+                JAVA8 forEach using Consumer and Predicate""");
+        Consumer<Person> con = (p) -> System.out.println(p);
+        people.forEach(p -> {
+            if(predicate.test(p)){
+                con.accept(p);
+            }
+        });
     }
 
 }
