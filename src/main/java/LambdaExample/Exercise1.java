@@ -3,6 +3,7 @@ package LambdaExample;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Exercise1 {
 
@@ -23,9 +24,9 @@ public class Exercise1 {
 //        System.out.println(Arrays.deepToString(people));
     }
 
-    private static void printList(List<Person> people, Condition condition) {
+    private static void printList(List<Person> people, Predicate<Person> predicate) {
         for(Person p : people){
-            if(condition.test(p)){
+            if(predicate.test(p)){
                 System.out.println(p);
             }
         }
