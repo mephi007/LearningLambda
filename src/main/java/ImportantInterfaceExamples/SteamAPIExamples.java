@@ -1,6 +1,7 @@
 package ImportantInterfaceExamples;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
@@ -27,5 +28,12 @@ public class SteamAPIExamples {
         squaredList.forEach(i ->{
             con.accept(String.valueOf(i));
         });
+
+        //Statstics
+        IntSummaryStatistics stats = nums.stream().mapToInt(x -> x).summaryStatistics();
+        System.out.println("Max Number "+ stats.getMax());
+        System.out.println("Min Number "+ stats.getMin());
+        System.out.println("Sum of all numbers "+ stats.getSum());
+        System.out.println("Avg of all numbers "+ stats.getAverage());
     }
 }
