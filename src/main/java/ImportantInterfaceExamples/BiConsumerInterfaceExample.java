@@ -1,6 +1,10 @@
 package ImportantInterfaceExamples;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.BiConsumer;
+import java.util.function.BiPredicate;
+import java.util.function.Predicate;
 
 public class BiConsumerInterfaceExample {
 
